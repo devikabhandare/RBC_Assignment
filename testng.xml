@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+  
+<suite name="RBCTestAmazonWebsite" parallel="tests" >
+<listeners>
+<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+</listeners>
+
+  <test name="Firefox_AmazonWebsite">
+    <parameter name="browser" value="firefox">
+    </parameter>
+    <classes>
+      <class name="Amazon.BaseClass"/>
+    </classes>
+  </test>
+  <!--
+    <test name="Chrome_AmazonWebsite">
+    <parameter name="browser" value="chrome">
+    </parameter>
+    <classes>
+      <class name="Amazon.BaseClass"/>
+    </classes>
+  </test>
+  -->
+  
+  
+</suite>
